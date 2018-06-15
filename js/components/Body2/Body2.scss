@@ -1,0 +1,36 @@
+@import "../../../styles/variables/variables";
+
+.active2 {
+  filter: sepia(60%);
+  height: map-get($dimensions, height-box-midi);
+  width: map-get($dimensions, height-box-midi);
+
+  &:hover {
+    transform: rotate(10deg) scale(0.8);
+  }
+}
+
+.hidden2 {
+  filter: grayscale(100%) blur(400px);
+  height: map-get($dimensions, heigh-box-midi);
+  width: map-get($dimensions, height-box-midi);
+}
+
+.removed2 {
+  opacity: 0;
+}
+
+.tilescontainer2 {
+  max-width: 645px;
+  margin: 10px auto;
+}
+
+.singleTitle2 {
+  display: inline-block;
+  overflow: hidden;
+  height: map-get($dimensions, height-box-midi);
+  width: map-get($dimensions, height-box-midi);
+  margin: 7px;
+  border-radius: 10px;
+}
+

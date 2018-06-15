@@ -1,0 +1,61 @@
+@import "../../../styles/variables/variables";
+
+
+.active {
+  @include activeClass(map-get($dimensions, height-box-mini), map-get($dimensions, height-box-mini), 70%)
+}
+
+.hidden {
+  filter: grayscale(100%) blur(400px);
+  height: map-get($dimensions, heigh-box-mini);
+  width: map-get($dimensions, height-box-mini);
+}
+
+.removed {
+  opacity: 0;
+}
+
+.tilescontainer {
+  max-width: 680px;
+  margin: 10px auto;
+}
+
+.singleTitle {
+  display: inline-block;
+  overflow: hidden;
+  height: map-get($dimensions, height-box-mini);
+  width: map-get($dimensions, height-box-mini);
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.container {
+  position: relative;
+  max-width: 100%;
+}
+
+.background {
+  position: absolute;
+  top: 140px;
+  left: 120px;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  overflow: hidden;
+  height: 40%;
+  width: 80%;
+  color: map-get($colors, text-bg);
+  font-size: 120px;
+  font-family: 'Allura', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-25deg);
+}
+
+.footer {
+  color: #FF5C5E;
+  font-family: 'Allura', cursive;
+  text-align: center;
+  font-size: 40px;
+}

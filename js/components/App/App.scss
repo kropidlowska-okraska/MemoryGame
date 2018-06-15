@@ -1,0 +1,89 @@
+@import "../../../styles/variables/variables";
+
+body {
+  background-color: map-get($colors, bg-main);
+}
+
+.header h1 {
+  color: map-get($colors, text-main);
+  font-family: 'Allura', cursive;
+  font-weight: 800;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 100px;
+}
+
+.header-clicked {
+  display: none;
+}
+
+.main__navigation {
+  text-align: center;
+  margin: 120px 0;
+}
+
+.main__navigation-clicked {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.main__navigation ul li {
+  display: inline-block;
+  height: 270px;
+  width: 270px;
+  font-size: 34px;
+  font-family: 'Lobster Two', cursive;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 3px solid map-get($colors, border-buttons);
+  border-radius: 50%;
+  margin: 5px 50px;
+  text-align: center;
+  background-color: map-get($colors, bg-buttons);
+
+  &:hover {
+    @include boxShadow();
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.main__navigation-clicked ul li {
+  display: inline-block;
+  height: 40px;
+  width: 200px;
+  font-size: 25px;
+  font-family: 'Lobster Two', cursive;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 3px solid map-get($colors, border-buttons);
+  border-radius: 10px;
+  margin: 5px 50px;
+  text-align: center;
+  background-color: map-get($colors, bg-buttons);
+
+  &:hover {
+    @include boxShadow();
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.main__navigation li a {
+  text-decoration: none;
+  padding:90px 30px;
+  line-height: 250px;
+  overflow: visible;
+  color: map-get($colors, text-main);
+}
+
+.main__navigation-clicked li a {
+  text-decoration: none;
+  padding:10px;
+  line-height: 40px;
+  color: map-get($colors, text-main);
+}
